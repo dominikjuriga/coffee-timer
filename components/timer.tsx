@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import s from "../styles/timer.module.css"
 
 interface Props {
@@ -14,7 +14,7 @@ const Timer = ({ time }: Props) => {
             if (running && timeLeft > 0) {
                 setTimeLeft(timeLeft => timeLeft - 1)
             } else {
-                setRunning(false)
+                stopTimer()
             }
         }, 1000)
         return () => {
@@ -40,6 +40,7 @@ const Timer = ({ time }: Props) => {
                 <div className={s.progress} style={{ width: `${timeLeft / time * 100}%` }}>
                 </div>
                 <span className={s.count}>{timeLeft} seconds</span>
+                { }
             </div>
             {timeLeft > 0 && (
                 <>
@@ -51,9 +52,9 @@ const Timer = ({ time }: Props) => {
                     )}
                 </>
             )}
-            {timeLeft != time && (
-                <button className={s.button} onClick={reset}>Reset</button>
-            )}
+
+            <button className={s.button} disabled={timeLeft == time} onClick={reset}>Reset</button>
+
         </>
     )
 }

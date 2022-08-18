@@ -15,8 +15,8 @@ const Layout = ({ children }: Props) => {
                 {children}
             </main>
             <footer className={s.footer}>
-                <Link href="https://github.com/dominikjuriga/coffee-timer">Repo.</Link>
                 <p>Implemented by <Link href="https://github.com/dominikjuriga">Dominik Juriga</Link> from <Link href="https://djds.sk">DJDS</Link>.</p>
+                <Link href="https://github.com/dominikjuriga/coffee-timer">Repo.</Link>
             </footer>
         </div >
     )

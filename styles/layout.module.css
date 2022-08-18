@@ -29,6 +29,7 @@
 
 .footer {
     background-color: var(--bg-dark-accent);
+    text-align: center;
 }
 
 .layout {

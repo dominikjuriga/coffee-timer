@@ -23,7 +23,7 @@ const Home: NextPage = () => {
           </Link>
         </li>
         <li>
-          <Link href={getUrl("v60")}>
+          <Link href={getUrl("vsixty")}>
             <a>
               <Image alt='V60 brewer' src={`/v60.svg`} width={iconDimension} height={iconDimension}></Image>
               V60

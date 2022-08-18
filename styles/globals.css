@@ -8,6 +8,9 @@
   --fs-500: 1.5em;
   --fs-600: 2em;
   --fs-700: 2.75em;
+
+  --accent: rgb(100, 100, 100);
+  --accent-darker: rgb(80, 80, 80);
 }
 
 html,
