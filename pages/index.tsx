@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <li>
           <Link href={getUrl("aeropress")}>
             <a>
-              <Image alt='Aeropress brewer' src={`/aeropress.svg`} width={iconDimension} height={iconDimension}></Image>
+              <Image alt='Aeropress brewer' src={`${process.env.ASSET_PATH || ""}/aeropress.svg`} width={iconDimension} height={iconDimension}></Image>
               AeroPress
             </a>
           </Link>
