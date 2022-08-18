@@ -18,7 +18,7 @@ const Recipe = ({ recipe }: Props) => {
                             </ul>
                         )}
                         {step.timer && (
-                            <Timer time={step.timer.value} />
+                            <Timer timer={{ value: step.timer.value, markers: step.timer.markers }} />
                         )}
                     </div>
                     {index < recipe.steps.length - 1 &&

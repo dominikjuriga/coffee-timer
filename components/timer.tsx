@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import s from "../styles/timer.module.css"
+import { ITimer } from './recipe'
 
-interface Props {
-    time: number
-}
-
-const Timer = ({ time }: Props) => {
-    const [timeLeft, setTimeLeft] = useState(time)
+const Timer = ({ timer }: { timer: ITimer }) => {
+    const [timeLeft, setTimeLeft] = useState(timer.value)
     const [running, setRunning] = useState(false)
 
     useEffect(() => {
@@ -31,16 +28,18 @@ const Timer = ({ time }: Props) => {
     }
 
     const reset = () => {
-        setTimeLeft(time)
+        setTimeLeft(timer.value)
     }
 
     return (
         <>
             <div className={s.progressBar}>
-                <div className={s.progress} style={{ width: `${timeLeft / time * 100}%` }}>
+                <div className={s.progress} style={{ width: `${timeLeft / timer.value * 100}%` }}>
                 </div>
                 <span className={s.count}>{timeLeft} seconds</span>
-                { }
+                {timer.markers && timer.markers.map((markerSeconds) => (
+                    <span key={markerSeconds} style={{ left: `${(timer.value - markerSeconds) / (0.01 * timer.value)}%` }} className={s.marker}></span>
+                ))}
             </div>
             {timeLeft > 0 && (
                 <>
@@ -53,7 +52,7 @@ const Timer = ({ time }: Props) => {
                 </>
             )}
 
-            <button className={s.button} disabled={timeLeft == time} onClick={reset}>Reset</button>
+            <button className={s.button} disabled={timeLeft == timer.value} onClick={reset}>Reset</button>
 
         </>
     )

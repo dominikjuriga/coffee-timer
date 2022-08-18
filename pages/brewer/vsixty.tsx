@@ -57,25 +57,29 @@ const recipes: { [key: string]: IRecipe } = {
             {
                 description: "Pour 60 grams of water in 10 seconds, then wait 35 seconds.",
                 timer: {
-                    value: 45
+                    value: 45,
+                    markers: [10]
                 }
             },
             {
                 description: "Pour 60 grams of water in 10 seconds, then wait 35 seconds.",
                 timer: {
-                    value: 45
+                    value: 45,
+                    markers: [10]
                 }
             },
             {
                 description: "Pour 60 grams of water in 10 seconds, then wait 35 seconds.",
                 timer: {
-                    value: 45
+                    value: 45,
+                    markers: [10]
                 }
             },
             {
                 description: "Pour 60 grams of water in 10 seconds, then wait 35 seconds.",
                 timer: {
-                    value: 45
+                    value: 45,
+                    markers: [10]
                 }
             },
             {

@@ -29,3 +29,13 @@
     margin: 1em 0;
     font-size: 1.25em;
 }
+
+.marker {
+    height: 2.5em;
+    width: 4px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
