@@ -1,0 +1,39 @@
+.header,
+.footer,
+.container {
+    padding: var(--p);
+}
+
+.header {
+    background-color: var(--bg-dark-accent);
+    height: var(--navbar-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+}
+
+.header a {
+    font-size: 2em;
+    font-style: italic;
+    font-family: monospace;
+}
+
+.container {
+    flex: 1;
+    margin-top: var(--navbar-height);
+}
+
+.footer {
+    background-color: var(--bg-dark-accent);
+}
+
+.layout {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+}

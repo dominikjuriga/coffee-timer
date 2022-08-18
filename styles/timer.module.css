@@ -1,0 +1,31 @@
+.progressBar {
+    --height: 2em;
+    height: calc(var(--height) + 2px);
+    padding-top: 1px;
+    width: 100%;
+    border: 1px solid var(--accent-darker);
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: var(--accent);
+    height: var(--height);
+    transition: width 1s linear;
+    border-radius: 8px;
+}
+
+.count {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.button {
+    width: 100%;
+    padding: var(--p);
+    margin: 1em 0;
+    font-size: 1.25em;
+}

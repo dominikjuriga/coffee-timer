@@ -1,0 +1,42 @@
+.recipe {
+    --accent: rgb(100, 100, 100);
+    --accent-darker: rgb(80, 80, 80);
+}
+
+.step {
+    min-height: 80vh;
+    scroll-snap-align: start;
+    height: 100%;
+    margin-bottom: 4em;
+    scroll-margin-top: 6em;
+    background-color: rgb(10, 10, 10);
+    border-radius: 8px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 2px 2px 2px gray;
+}
+
+.nextStep {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: var(--p) 0;
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: var(--accent);
+    border-radius: 8px;
+    font-size: 1.5em;
+}
+
+.stepCounter {
+    font-size: 1.75em;
+    color: var(--accent);
+}
+
+.recipe p,
+.recipe a {
+    font-size: 2em;
+    word-wrap: break-word;
+}
